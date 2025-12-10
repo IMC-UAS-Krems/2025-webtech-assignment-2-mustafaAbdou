@@ -202,3 +202,14 @@
         width: 100% !important;
     }
 }
+.order-summary {
+    max-height: calc(100vh - 2rem);
+    display: flex;
+    flex-direction: column;
+}
+
+.order-summary .card-body {
+    overflow-y: auto;
+    flex: 1;
+    min-height: 0;  /* crucial for flex scroll */
+}

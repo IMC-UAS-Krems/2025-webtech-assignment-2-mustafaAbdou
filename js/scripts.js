@@ -21,31 +21,31 @@ document.addEventListener("DOMContentLoaded", () => {
                         name: "Classic Burger",
                         price: 8.99,
                         description: "Delicious homemade burger with fresh ingredients.",
-                        image: "img/burgers/burger1.jpg"
+                        image: "imgs/burgers/burger1.jpg"
                     },
                     {
                         name: "Cheese Burger",
                         price: 9.49,
                         description: "Juicy burger topped with cheddar cheese and lettuce.",
-                        image: "img/burgers/burger2.jpg"
+                        image: "imgs/burgers/burger2.jpg"
                     },
                     {
                         name: "Veggie Burger",
                         price: 7.99,
                         description: "Healthy veggie patty with avocado and tomato.",
-                        image: "img/burgers/burger3.jpg"
+                        image: "imgs/burgers/burger3.jpg"
                     },
                     {
                         name: "Double Burger",
                         price: 10.99,
                         description: "Two juicy patties with cheese and bacon.",
-                        image: "img/burgers/burger4.jpg"
+                        image: "imgs/burgers/burger4.jpg"
                     },
                     {
                         name: "BBQ Burger",
                         price: 9.99,
                         description: "Smoky BBQ sauce with crispy onions.",
-                        image: "img/burgers/burger5.jpg"
+                        image: "imgs/burgers/burger5.jpg"
                     }
                 ]
             },
@@ -56,19 +56,19 @@ document.addEventListener("DOMContentLoaded", () => {
                         name: "Margherita Pizza",
                         price: 12.99,
                         description: "Classic pizza with tomato, mozzarella, and basil.",
-                        image: "img/pizza/margherita.jpg"
+                        image: "imgs/pizza/margherita.jpg"
                     },
                     {
                         name: "Pepperoni Pizza",
                         price: 13.99,
                         description: "Pizza loaded with pepperoni and cheese.",
-                        image: "img/pizza/pepperoni.jpg"
+                        image: "imgs/pizza/pepperoni.jpg"
                     },
                     {
                         name: "Veggie Pizza",
                         price: 11.99,
                         description: "Colorful veggie toppings on fresh dough.",
-                        image: "img/pizza/veggie.jpg"
+                        image: "imgs/pizza/veggie.jpg"
                     }
                 ]
             },
@@ -79,13 +79,13 @@ document.addEventListener("DOMContentLoaded", () => {
                         name: "Caesar Salad",
                         price: 7.99,
                         description: "Fresh salad with crispy lettuce and parmesan.",
-                        image: "img/salads/caesar.jpg"
+                        image: "imgs/salads/caesar.jpg"
                     },
                     {
                         name: "Garden Salad",
                         price: 6.99,
                         description: "Mixed greens with cherry tomatoes and cucumber.",
-                        image: "img/salads/garden.jpg"
+                        image: "imgs/salads/garden.jpg"
                     }
                 ]
             },
@@ -96,13 +96,13 @@ document.addEventListener("DOMContentLoaded", () => {
                         name: "Chocolate Cake",
                         price: 5.99,
                         description: "Rich chocolate cake with frosting.",
-                        image: "img/desserts/chocolate_cake.jpg"
+                        image: "imgs/desserts/chocolate_cake.jpg"
                     },
                     {
                         name: "Cheesecake",
                         price: 6.99,
                         description: "Creamy cheesecake with cherry topping.",
-                        image: "img/desserts/cheesecake.jpg"
+                        image: "imgs/desserts/cheesecake.jpg"
                     }
                 ]
             },
@@ -113,13 +113,13 @@ document.addEventListener("DOMContentLoaded", () => {
                         name: "Iced Tea",
                         price: 2.99,
                         description: "Refreshing iced tea with lemon.",
-                        image: "img/beverages/iced_tea.jpg"
+                        image: "imgs/beverages/iced_tea.jpg"
                     },
                     {
                         name: "Soft Drink",
                         price: 2.49,
                         description: "Cold and bubbly soft drink.",
-                        image: "img/beverages/soft_drink.jpg"
+                        image: "imgs/beverages/soft_drink.jpg"
                     }
                 ]
             },
@@ -130,13 +130,13 @@ document.addEventListener("DOMContentLoaded", () => {
                         name: "Chicken Wings",
                         price: 8.99,
                         description: "Crispy wings with spicy sauce.",
-                        image: "img/appetizers/chicken_wings.jpg"
+                        image: "imgs/appetizers/chicken_wings.jpg"
                     },
                     {
                         name: "Mozzarella Sticks",
                         price: 5.99,
                         description: "Golden fried mozzarella with marinara sauce.",
-                        image: "img/appetizers/mozzarella_sticks.jpg"
+                        image: "imgs/appetizers/mozzarella_sticks.jpg"
                     }
                 ]
             },
@@ -147,13 +147,13 @@ document.addEventListener("DOMContentLoaded", () => {
                         name: "Grilled Fish",
                         price: 14.99,
                         description: "Fresh grilled fish fillet with herbs.",
-                        image: "img/seafood/grilled_fish.jpg"
+                        image: "imgs/seafood/grilled_fish.jpg"
                     },
                     {
                         name: "Shrimp Pasta",
                         price: 13.99,
                         description: "Pasta with succulent shrimp and garlic sauce.",
-                        image: "img/seafood/shrimp_pasta.jpg"
+                        image: "imgs/seafood/shrimp_pasta.jpg"
                     }
                 ]
             }
@@ -280,6 +280,8 @@ document.addEventListener("DOMContentLoaded", () => {
           <strong>${item.name}</strong>
           <br>
           <small class="text-muted">$${item.price.toFixed(2)} each</small>
+          <br>
+           <strong class="text-success">$${(item.price * item.quantity).toFixed(2)}</strong>
         </div>
         <div class="d-flex justify-content-between align-items-center">
           <div class="btn-group btn-group-sm" role="group">
@@ -294,7 +296,6 @@ document.addEventListener("DOMContentLoaded", () => {
             </button>
           </div>
           <div>
-            <strong>$${(item.price * item.quantity).toFixed(2)}</strong>
             <button class="btn btn-sm btn-danger ms-2 remove-item" data-index="${index}">
               <i class="fas fa-trash"></i>
             </button>
